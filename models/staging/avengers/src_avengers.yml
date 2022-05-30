@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: avengers
+    database: raw_dev
+    schema: avengers
+    tables:
+      - name: avengers_history
