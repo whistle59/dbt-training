@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: stg_fandango__score_comparison
+  - name: stg_fandango__scrape
