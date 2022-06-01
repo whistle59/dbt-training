@@ -1,0 +1,7 @@
+version: 2
+
+models:
+  - name: dim_avengers
+  - name: dim_movies
+  - name: fct_avenger_activity
+  - name: fct_movie_voting

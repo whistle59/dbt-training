@@ -14,12 +14,9 @@ final as (
 
     select
         fandango_scrape.movie_id,
-        -- fandango_scrape.movie_name,
+        fandango_scrape.movie_name,
         fandango_scrape.scrape_stars,
         fandango_scrape.scrape_rating,
-        fandango_scrape.scrape_vote_count,
-
-        fandango_scores.movie_name,
         fandango_scores.movie_year,
         fandango_scores.rotten_tomatoes_score,
         fandango_scores.rotten_tomatoes_user,
