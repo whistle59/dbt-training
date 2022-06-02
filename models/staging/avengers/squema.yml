@@ -2,3 +2,38 @@ version: 2
 
 models:
   - name: stg_avengers__avengers_history
+    description: A staging model for Avengers history data.
+    columns:
+      - name: avenger_id
+        description: Unique identifier for an Avenger.
+        tests:
+          - unique
+      - name: marvel_wikia_url
+      - name: avenger_name
+        tests:
+          - not_null
+      - name: num_of_appearances
+      - name: is_current
+      - name: gender
+      - name: probationary_intro
+      - name: full_reserve_intro
+      - name: year_joined
+        tests:
+          - is_valid_avenger_year
+      - name: years_since_joining
+      - name: death_1
+        tests:
+          - accepted_values:
+              values:
+                - 'YES'
+                - 'NO'
+      - name: return_1
+      - name: death_2
+      - name: return_2
+      - name: death_3
+      - name: return_3
+      - name: death_4
+      - name: return_4
+      - name: death_5
+      - name: return_5
+      - name: notes

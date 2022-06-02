@@ -2,7 +2,11 @@ version: 2
 
 sources:
   - name: avengers
-    database: raw_dev
+    database:  |
+      {%- if  target.name == "dev" -%} raw_dev
+      {%- elif target.name == "prod"  -%} raw
+      {%- else -%} invalid_database
+      {%- endif -%}
     schema: avengers
     tables:
       - name: avengers_history

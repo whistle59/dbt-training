@@ -32,5 +32,8 @@ final as (
 
     from avengers_history
 
+    {% if target.name == 'dev' %}
+    where notes != 'na' 
+    {% endif %}
 )
 select * from final
