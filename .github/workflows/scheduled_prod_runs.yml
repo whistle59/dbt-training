@@ -1,0 +1,32 @@
+name: Scheduled Prod Runs
+
+on:
+  schedule:
+    # Runs "at minute 55 past every hour" (see https://contab.guru)
+    cron: '55 * * * *'
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      DBT_USER: ${{ secrets.DBT_USER }}
+      DBT_PASSWORD: ${{ secrets.DBT_PASSWORD }}
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with: 
+          python-version: '3.9'
+
+      - name: Install dbt
+        run: pip install dbt-snowflake
+
+      - name: Run dbt deps
+        run: dbt deps --profiles-dir .
+
+      - name: Run dbt build
+        run: dbt build --profiles-dir .
