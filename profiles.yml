@@ -1,7 +1,7 @@
 dbt_training:
   outputs:
     dev:
-      account: pi21224.us-central1.gcp
+      account: 999pi21224.us-central1.gcp
       database: ANALYTICS_DEV
       password: "{{ env_var('DBT_PASSWORD') }}"
       role: DBT_TRAINING
@@ -11,7 +11,7 @@ dbt_training:
       user: "{{ env_var('DBT_USER')}}"
       warehouse: DBT_TRAINING_WH
     prod:
-      account: pi21224.us-central1.gcp
+      account: 999pi21224.us-central1.gcp
       database: ANALYTICS
       password: "{{ env_var('DBT_PASSWORD') }}"
       role: DBT_TRAINING
