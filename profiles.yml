@@ -22,3 +22,4 @@ dbt_training:
       warehouse: DBT_TRAINING_WH
 
   target: dev
+  
