@@ -3,22 +3,22 @@ dbt_training:
     dev:
       account: pi21224.us-central1.gcp
       database: ANALYTICS_DEV
-      password: "{{ ENV_VAR('DBT_PASSWORD') }}"
+      password: "{{ env_var('DBT_PASSWORD') }}"
       role: DBT_TRAINING
       schema: MROONEY
       threads: 1
       type: snowflake
-      user: "{{ ENV_VAR('DBT_USER')}}"
+      user: "{{ env_var('DBT_USER')}}"
       warehouse: DBT_TRAINING_WH
     prod:
       account: pi21224.us-central1.gcp
       database: ANALYTICS
-      password: "{{ ENV_VAR('DBT_PASSWORD') }}"
+      password: "{{ env_var('DBT_PASSWORD') }}"
       role: DBT_TRAINING
       schema: MROONEY
       threads: 1
       type: snowflake
-      user: "{{ ENV_VAR('DBT_USER')}}"
+      user: "{{ env_var('DBT_USER')}}"
       warehouse: DBT_TRAINING_WH
 
   target: dev
