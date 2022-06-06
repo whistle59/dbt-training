@@ -22,7 +22,7 @@ final as (
         return_3,
         return_2,
         full_reserve_avengers_intro as full_reserve_intro,
-        death_1,
+        upper(death_1)  as death_1,
         return_5,
         years_since_joining as years_since_joining,
         return_4,
